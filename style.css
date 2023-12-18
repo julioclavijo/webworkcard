@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
+/*configuracion inicial*/
 * {
     border: 0;
     margin: 0;
@@ -10,9 +11,10 @@
 :root {
     --primary: #254E70;
     --secondary: #C33C54;
-    --blu-sky: #37718E;
+    --blue-sky: #37718E;
     --white: #f7f7f7;
     --grey: #ccc;
+    --cyan: #8EE3EF;
 }
 
 body {
@@ -42,15 +44,17 @@ nav ul {
 }
 
 nav ul li {
-    
+
     display: inline;
     margin-left: 30px;
 }
 
-
-
 nav ul li a {
     color: var(--white);
+}
+
+nav ul li a:hover {
+    color: var(--cyan);
 }
 
 nav ul li a:visited {
@@ -60,12 +64,19 @@ nav ul li a:visited {
 .header {
     background: var(--primary);
     background-image: url(assets/header.png);
+    background-position: center center;
+    background-size: cover;
 }
 
 .wide {
-    max-width: 1400px;
+    max-width: 100%;
+    width: 100%;
     background: var(--white);
     box-shadow: 10px 10px 33px 0px rgba(0, 0, 0, 0.07);
+}
+
+.container {
+    max-width: 1400px;
 }
 
 .caracteristicas {
@@ -106,6 +117,8 @@ h1 span {
 }
 
 h3 {
+    border-left: 2px solid var(--secondary);
+    padding-left: 10px;
     color: #000;
     font-family: Poppins;
     font-size: 16px;
@@ -113,22 +126,36 @@ h3 {
     font-weight: 700;
     line-height: normal;
 }
-
-.download{
- padding-top: 30px;
+p{
+    margin-bottom: 0;
 }
-
-.caracteristicas{
-padding-top: 30px;
-color: var(--white);
+p+p{
+    margin-bottom: 10px;
 }
-
-footer{
-    padding-top: 30px;
+.text-left{
+    text-align: right;
 }
 
 
-footer p{
+.bold{
+    font-weight: 700;
+}
+
+.download {
+    padding-top: 90px;
+}
+
+.caracteristicas {
+    padding: 60px 0;
+    color: var(--white);
+}
+
+/* footer */
+footer {
+    padding-top: 60px;
+}
+
+footer  p{
     color: #FFF;
     font-family: Poppins;
     font-size: 12px;
@@ -136,32 +163,48 @@ footer p{
     font-weight: 400;
     line-height: normal;
 }
-footer li{
 
+footer  li {
     color: #FFF;
     font-family: Poppins;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    list-style: none;
 }
-footer ul li{
+
+footer ul li {
     text-decoration: none;
 }
 
-.divider{
-    border-top: 0.01em solid #f1f3f5;
+.divider {
+    /* border-top: 0.01em solid #f1f3f5; */
+    width: 100%;
+    height: 0.2px;
+    background: #000;
 }
 
-.wireframes{
+.wireframes {
     position: relative;
 }
 
-.wireframes img{
+.wireframes img {
     position: absolute;
-    top: -200px;
+    top: -90px;
 }
 
-.workcard{
-    padding-top: 100px;
+.workcard {
+    padding-top: 170px;
+}
+
+.card-image {
+    display: flex;
+    justify-content: center;
+}
+.space-2{
+    margin-bottom: 20px;
+}
+.creditos{
+    padding: 10px 0;
 }
